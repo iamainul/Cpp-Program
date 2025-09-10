@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    // Ask the user how many terms they want
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    // Initialize first two Fibonacci numbers
+    int first = 0, second = 1, next;
+
+    // Print the series
+    cout << "Fibonacci Series: ";
+
+    for (int i = 0; i < n; i++) {
+        cout << first << " ";         // Print the current number
+        next = first + second;        // Calculate next number
+        first = second;               // Move first to second
+        second = next;                // Move second to next
+    }
+
+    cout << endl;
+    return 0;
+}
